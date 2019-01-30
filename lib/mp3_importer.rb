@@ -6,7 +6,7 @@ class MP3Importer
   end
   def files
     binding.pry
-    Dir[@file_path].select{|file| file[-4..-1] == '.mp3'}
+    Dir[@file_path].select{|file| file.chars.last(4) == '.mp3'}
   end
   def import
   end
