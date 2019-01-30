@@ -19,7 +19,9 @@ class Artist
     if @@all.any? {|artist| artist.name == name}
       @@all.find {|artist| artist.name == name}
     else
-      Artist.new(name).save
+      new_artist = Artist.new(name)
+      new_artist.save
+      new_artist
     end
   end
 end
