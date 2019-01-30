@@ -9,7 +9,7 @@ class Artist
     @songs << song
     song.artist = self
   end
-  def self.save
+  def save
     @@all << self
   end
   def find_or_create_by_name(name)
