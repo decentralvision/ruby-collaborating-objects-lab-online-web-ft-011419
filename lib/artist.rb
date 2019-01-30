@@ -13,6 +13,12 @@ class Artist
     @@all << self
   end
   def find_or_create_by_name(name)
-    @@all.any?{|artist| artist.name == name}
+    if @@all.any? {|artist| artist.name == name}
+      @@all.find {|artist| artist.name == name}
+    else
+      Artist.new(name).save
+    end
+  end
+
   end
 end
