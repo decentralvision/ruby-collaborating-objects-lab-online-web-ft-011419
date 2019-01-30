@@ -6,7 +6,7 @@ class MP3Importer
   end
   def files
     binding.pry
-    Dir[@path].select{|file| file.chars.last(4).join == '.mp3'}
+    Dir[@path/*].select{|file| file.chars.last(4).join == '.mp3'}
   end
   def import
   end
