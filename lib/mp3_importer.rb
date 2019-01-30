@@ -1,12 +1,12 @@
 require 'pry'
 class MP3Importer
-  attr_accessor :file_path
-  def initialize(file_path)
-    @file_path = file_path
+  attr_accessor :path
+  def initialize(path)
+    @path = path
   end
   def files
     binding.pry
-    Dir[@file_path].select{|file| file.chars.last(4).join == '.mp3'}
+    Dir[@path].select{|file| file.chars.last(4).join == '.mp3'}
   end
   def import
   end
