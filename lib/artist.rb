@@ -19,6 +19,4 @@ class Artist
       Artist.new(name).save
     end
   end
-
-  end
 end
